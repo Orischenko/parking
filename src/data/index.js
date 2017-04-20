@@ -1,153 +1,153 @@
 export const cars = [
     {
         "age": 0,
-        "id": "car1",
+        "id": "place1",
         "category": "truck"
     },
     {
         "age": 1,
-        "id": "car2",
+        "id": "place2",
         "category": "truck"
     },
     {
         "age": 2,
-        "id": "car3",
+        "id": "place3",
         "category": "truck"
     },
     {
         "age": 3,
-        "id": "car4",
+        "id": "place4",
         "category": "truck"
     },
     {
         "age": 4,
-        "id": "car5",
+        "id": "place5",
         "category": "truck"
     },
     {
         "age": 5,
-        "id": "car6",
+        "id": "place6",
         "category": "truck"
     },
     {
         "age": 6,
-        "id": "car7",
+        "id": "place7",
         "category": "truck"
     },
     {
         "age": 7,
-        "id": "car8",
+        "id": "place8",
         "category": "truck"
     },
     {
         "age": 8,
-        "id": "car9",
+        "id": "place9",
         "category": "truck"
     },
     {
         "age": 9,
-        "id": "car10",
+        "id": "place10",
         "category": "truck"
     },
     {
         "age": 10,
-        "id": "car11",
+        "id": "place11",
         "category": "disabled"
     },
     {
         "age": 11,
-        "id": "car12",
+        "id": "place12",
         "category": "disabled"
     },
     {
         "age": 12,
-        "id": "car13",
+        "id": "place13",
         "category": "disabled"
     },
     {
         "age": 13,
-        "id": "car14",
+        "id": "place14",
         "category": "disabled"
     },
     {
         "age": 14,
-        "id": "car15",
+        "id": "place15",
         "category": "disabled"
     },
 
     {
         "age": 15,
-        "id": "car16",
+        "id": "place16",
         "category": "sedan"
     },
     {
         "age": 16,
-        "id": "car17",
+        "id": "place17",
         "category": "sedan"
     },
     {
         "age": 17,
-        "id": "car18",
+        "id": "place18",
         "category": "sedan"
     },
     {
         "age": 18,
-        "id": "car19",
+        "id": "place19",
         "category": "sedan"
     },
     {
         "age": 19,
-        "id": "car20",
+        "id": "place20",
         "category": "sedan"
     },
     {
         "age": 20,
-        "id": "car21",
+        "id": "place21",
         "category": "sedan"
     },
     {
         "age": 21,
-        "id": "car22",
+        "id": "place22",
         "category": "sedan"
     },
     {
         "age": 22,
-        "id": "car23",
+        "id": "place23",
         "category": "sedan"
     },
     {
         "age": 23,
-        "id": "car24",
+        "id": "place24",
         "category": "sedan"
     },
     {
         "age": 24,
-        "id": "car25",
+        "id": "place25",
         "category": "sedan"
     },
     {
         "age": 25,
-        "id": "car26",
+        "id": "place26",
         "category": "sedan"
     },
     {
         "age": 26,
-        "id": "car27",
+        "id": "place27",
         "category": "sedan"
     },
     {
         "age": 27,
-        "id": "car28",
+        "id": "place28",
         "category": "sedan"
     },
     {
         "age": 28,
-        "id": "car29",
+        "id": "place29",
         "category": "sedan"
     },
     {
         "age": 29,
-        "id": "car30",
+        "id": "place30",
         "category": "sedan"
     }
 ];
