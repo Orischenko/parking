@@ -1,0 +1,24 @@
+// Clear
+@mixin reset-list {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+// Opacity
+@mixin opacity($opacity) {
+	opacity: $opacity;
+	// IE8 filter
+	$opacity-ie: ($opacity * 100);
+	filter: #{alpha(opacity=$opacity-ie)};
+}
+
+// Transitions
+@mixin transition($transition...) {
+	transition: $transition;
+}
+
+// Box shadow
+@mixin box-shadow {
+	box-shadow: $box__shadow;
+}
