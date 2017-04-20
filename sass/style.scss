@@ -1,0 +1,24 @@
+@import "variables";
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,500italic,500,400italic,300italic,300,100italic,100);
+
+body{
+  font: 15px $font-family-base;
+  letter-spacing:.1px;
+  color:$gray;
+  background:$gray-lighter;
+  margin:0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2{
+  font:60px $font-family-base;
+  color:$gray;
+  font-weight: 300;
+}
