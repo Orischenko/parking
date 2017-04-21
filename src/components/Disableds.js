@@ -7,18 +7,30 @@ export default class Disableds extends Component{
     };
 
     render() {
-        const{ disableds } = this.props;
+        const{ disableds, handleStateChange } = this.props;
 
-        const disabledElements = disableds.map((disabled, i) => {
+        const disabledElements = disableds.slice(0, handleStateChange).map((disabled) => {
             return(
-                <li key={ disabled.age }><Disabled disabled={ disabled }/></li>
+                <li key={ disabled.id } className={ disabled.class }><Disabled /></li>
+            );
+        });
+
+        const emptyPlaces = disableds.map((place) => {
+            return(
+                <li key={ place.id }></li>
             );
         });
 
         return(
-            <ul className="disableds">
-                { disabledElements }
-            </ul>
+            <div className="disableds">
+                <h5>Disable parking ({ handleStateChange })</h5>
+                <ul>
+                    { disabledElements }
+                </ul>
+                <ul>
+                    { emptyPlaces }
+                </ul>
+            </div>
         );
     };
 }

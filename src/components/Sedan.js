@@ -1,13 +1,7 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 
 export default class Sedan extends Component{
-    static propTypes = {
-
-    };
-
     render() {
-        const{ sedan } = this.props;
-
         return(
             <div></div>
         );

@@ -9,8 +9,6 @@ body{
   color:$gray;
   background:$gray-lighter;
   margin:0;
-  display: flex;
-  justify-content: center;
   text-align: center;
 }
 
@@ -18,15 +16,79 @@ a {
   text-decoration: none;
 }
 
-h2{
-  font:60px $font-family-base;
+h3{
+  font:35px $font-family-base;
+  color: $black;
+  margin: 0 0 10px;
+  font-weight: 300;
+}
+
+h5{
+  font:18px $font-family-base;
   color:$gray;
   font-weight: 300;
 }
 
+#container {
+  padding: 15px;
+}
+
 #parking {
 
+  .trucks, .disableds, .sedans{
+    position: relative;
+  }
+
   ul {
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
     @include reset-list;
+
+    li {
+      width: 100px;
+      height: 30px;
+      background-color: $white;
+      margin: 7px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include box-shadow;
+    }
+
+    & + ul {
+      z-index: -1;
+
+      > li {
+        background-color: $gray-lighter;
+
+        &:before {
+          @include material-icon;
+          font-size: 20px;
+          content: "\e531";
+          color: $blue-lighter;
+          @include transition(all .3s ease);
+        }
+      }
+    }
+  }
+
+  .places{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .message{
+    padding: 10px;
+    color: $red;
+    max-width: 300px;
+    min-height: 38px;
+    box-sizing: border-box;
+    margin: 0 auto 20px auto;
+    font-weight: 300;
+
+    p {
+      margin: 0;
+    }
   }
 }

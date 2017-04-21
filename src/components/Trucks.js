@@ -7,18 +7,30 @@ export default class Trucks extends Component{
     };
 
     render() {
-        const{ trucks } = this.props;
+        const{ trucks, handleStateChange } = this.props;
 
-        const truckElements = trucks.map((truck, i) => {
+        const truckElements = trucks.slice(0, handleStateChange).map((truck) => {
             return(
-                <li key={ truck.age }><Truck truck={ truck }/></li>
+                <li key={ truck.id } className={ truck.class }><Truck /></li>
+            );
+        });
+
+        const emptyPlaces = trucks.map((place) => {
+            return(
+                <li key={ place.id }></li>
             );
         });
 
         return(
-            <ul className="trucks">
-                { truckElements }
-            </ul>
+            <div className="trucks">
+                <h5>Truck parking ({ handleStateChange })</h5>
+                <ul>
+                    { truckElements }
+                </ul>
+                <ul>
+                    { emptyPlaces }
+                </ul>
+            </div>
         );
     };
 }

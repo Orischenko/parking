@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Parking from './components/Parking';
-import { cars } from './data';
+import { places } from './data';
 
 require('./../sass/style.scss');
 
 ReactDOM.render(
-    <Parking parking={ cars }/>,
+    <Parking parking={ places }/>,
     document.getElementById('parking')
 );

@@ -7,18 +7,30 @@ export default class Sedans extends Component{
     };
 
     render() {
-        const{ sedans } = this.props;
+        const{ sedans, handleStateChange } = this.props;
 
-        const sedanElements = sedans.map((sedan) => {
+        const sedanElements = sedans.slice(0, handleStateChange).map((sedan) => {
             return(
-                <li key={ sedan.age }><Sedan sedan={ sedan }/></li>
+                <li key={ sedan.id }><Sedan /></li>
+            );
+        });
+
+        const emptyPlaces = sedans.map((place) => {
+            return(
+                <li key={ place.id }></li>
             );
         });
 
         return(
-            <ul className="sedans">
-                { sedanElements }
-            </ul>
+            <div className="sedans">
+                <h5>Sedans parking ({ handleStateChange })</h5>
+                <ul>
+                    { sedanElements }
+                </ul>
+                <ul>
+                    { emptyPlaces }
+                </ul>
+            </div>
         );
     };
 }
