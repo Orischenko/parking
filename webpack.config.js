@@ -1,8 +1,16 @@
 var webpack = require('webpack');
 var path = require('path');
 
+const NODE_ENV = process.env.NODE_ENV || 'development';
+const isDevelopment = NODE_ENV === 'development';
+
 module.exports = {
-    devtool: 'source-map',
+    //watch: isDevelopment,
+    devtool: isDevelopment && 'eval-source-map',
+
+    // dependencies: [
+    //     path.join(__dirname, "../", "node_modules")
+    // ],
 
     entry: [
         './src/app.js'
@@ -29,8 +37,19 @@ module.exports = {
             {
                 test: /\.js/,
                 loaders: ['babel'],
-                include: path.join(__dirname, 'src')
+                include: [
+                    path.join(__dirname, 'src'),
+                    path.join(__dirname, 'node_modules/react-icons')
+                ]
             }
         ]
-    }
+    },
+
+    plugins: [
+        new webpack.DefinePlugin({
+            'process.env': {
+                'NODE_ENV': JSON.stringify(NODE_ENV)
+            }
+        })
+    ]
 };
